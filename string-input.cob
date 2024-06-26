@@ -5,9 +5,9 @@
         *> setup the author
         AUTHOR. Manuel Gomes Rosmaninho.
         *> setup the date written
-        DATE-WRITTEN. 24/05/24.
+        DATE-WRITTEN. 24/06/24.
         *> setup the date compiled
-        DATE-COMPILED. 24/05/24.
+        DATE-COMPILED. 24/06/24.
       ****************************************************************
       * DESCRIPTION: TAKE STRING INPUT AND DISPLAY.
       ****************************************************************

@@ -1,54 +1,53 @@
-       *> setup the identification division
-       IDENTIFICATION DIVISION.
-        *> setup the program id
-        PROGRAM-ID. STUDENT-RECORD.
-        *> setup the author
-        AUTHOR. Manuel Gomes Rosmaninho
-        *> setup the date written
-        DATE-WRITTEN. 26/06/24.
-        *> setup the date compiled
-        DATE-COMPILED. 26/06/24.
+       IDENTIFICATION DIVISION. *> Section for the program’s identification.
+        PROGRAM-ID. STUDENT-RECORD. *> Program name.
+        AUTHOR. Manuel Gomes Rosmaninho *> Author name.
+        DATE-WRITTEN. 26/06/24. *> Date the program was written.
+        DATE-COMPILED. 26/06/24. *> Date the program was compiled.
+
       *********************************************************
-      * DESCRIPTION: TAKES A STUDENT DETAILS AND DISPLAY
-      * DETAILS: ID, NAME, SURNAME, GENDER, COURSE
+      * DESCRIPTION: PROGRAM TO INPUT STUDENT DETAILS AND DISPLAY THEM.
+      * DETAILS INCLUDE: ID, FORENAME, SURNAME, GENDER, COURSE.
       *********************************************************
-       *> setup the environment division
-       ENVIRONMENT DIVISION.
-       *> setup the data division
-       DATA DIVISION.
-       *> working storage defines variables
-       WORKING-STORAGE SECTION.
+
+       ENVIRONMENT DIVISION. *> Section for the program’s environment.
+       
+       DATA DIVISION. *> Section for the program’s data.
+       WORKING-STORAGE SECTION. *> Section for the program’s working storage.
+       *> Declare the STUDENT-DETAILS structure to hold all student information.
        01 STUDENT-DETAILS.
+          *> Define the student ID as a 6-digit number.
           05 STUDENT-ID        PIC 9(6).
+          *> Define the student's full name (forename and surname).
           05 STUDENT-FULLNAME.
-             10 FORENAME       PIC X(10).
-             10 SURNAME        PIC X(10).
-          05 GENDER            PIC X.
-          05 COURSE-CODE       PIC X(4).
-       *> setup the procedure division
-       PROCEDURE DIVISION.
-           *> print a string and get the student ID
+             10 FORENAME       PIC X(10). *> Forename with up to 10 characters.
+             10 SURNAME        PIC X(10). *> Surname with up to 10 characters.
+          *> Define the student's gender (1 character).
+          05 GENDER            PIC X. *> Single character for gender.
+          *> Define the course code as a 4-character alphanumeric string.
+          05 COURSE-CODE       PIC X(4). *> Course code with up to 4 characters.
+       
+       PROCEDURE DIVISION. *> Section for the program’s procedure.
+           *> Display a prompt and accept the student ID input.
            DISPLAY "Input student id: " WITH NO ADVANCING.
            ACCEPT STUDENT-ID.
-           *> print a string and get the student forename
+           *> Display a prompt and accept the student's forename.
            DISPLAY "Input student forename: " WITH NO ADVANCING.
            ACCEPT FORENAME.
-           *> print a string and get the student surname
+           *> Display a prompt and accept the student's surname.
            DISPLAY "Input student surname: " WITH NO ADVANCING.
            ACCEPT SURNAME.
-           *> print a string and get the student gender
+           *> Display a prompt and accept the student's gender.
            DISPLAY "Input student gender: " WITH NO ADVANCING.
            ACCEPT GENDER.
-           *> print a string and get the student course
+           *> Display a prompt and accept the student's course code.
            DISPLAY "Input student couse: " WITH NO ADVANCING.
            ACCEPT COURSE-CODE.
-           *> print student ID
+           *> Display the entered student ID.
            DISPLAY "Student ID: " STUDENT-ID.
-           *> print student full name
-           DISPLAY "Student fullname is: " STUDENT-FULLNAME.
-           *> print student gender
+           *> Display the entered student's full name (forename and surname).
+           DISPLAY "Student full name is: " FORENAME " " SURNAME.
+           *> Display the entered student's gender.
            DISPLAY "Student gender is: " GENDER.
-           *> print student course
+           *> Display the entered student's course code.
            DISPLAY "Student course is: " COURSE-CODE.
-           *> stop the program
-           STOP RUN.
+           STOP RUN. *> End the program execution.

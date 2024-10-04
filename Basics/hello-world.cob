@@ -1,23 +1,13 @@
-       *> setup the identification division
-       IDENTIFICATION DIVISION.
-        *> setup the program id
-        PROGRAM-ID.  HELLO-WORLD.
-        *> setup the author
-        AUTHOR. Manuel Gomes Rosmaninho.
-        *> setup the date written
-        DATE-WRITTEN. 24/06/24. 
-        *> setup the date compiled
-        DATE-COMPILED. 24/06/24.
-      ****************************************************************
-      * DESCRIPTION: THE HELLO-WORLD PROGRAM.
-      ****************************************************************
-       *> setup the environment division
-       ENVIRONMENT DIVISION.
-       *> setup the data division
-       DATA DIVISION.
-       *> setup the procedure division
-       PROCEDURE DIVISION.
-           *> print a string
-           DISPLAY "Hello, world!".
-           *> stop the program
-           STOP RUN.
+       IDENTIFICATION DIVISION. *> Section for the program’s identification.
+        PROGRAM-ID.  HELLO-WORLD. *> Program name.
+        AUTHOR. Manuel Gomes Rosmaninho. *> Author name.
+        DATE-WRITTEN. 24/06/24. *> Date the program was written.
+        DATE-COMPILED. 24/06/24. *> Date the program was compiled.
+
+       ENVIRONMENT DIVISION. *> Section for the program’s environment.
+
+       DATA DIVISION. *> Section for the program’s data.
+
+       PROCEDURE DIVISION. *> Section for the program’s logic.
+           DISPLAY "Hello, world!". *> Display the string on the screen.
+           STOP RUN. *> End program execution.

@@ -50,4 +50,5 @@
            DISPLAY "Student gender is: " GENDER.
            *> print student course
            DISPLAY "Student course is: " COURSE-CODE.
+           *> stop the program
            STOP RUN.
